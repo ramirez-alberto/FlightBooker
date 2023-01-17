@@ -1,0 +1,159 @@
+= Flight Booker
+
+== Project Definition
+
+*A typical airline booking flow:*
+
+1. Enter desired dates / airports and click “Search”
+2. Choose from among a list of available flights
+3. Enter passenger information for all passengers
+4. Enter billing information
+
+=== Models
+
+- Passengers
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|PASSENGER_ID
+|int
+|NOT NULL
+
+|NAME
+|string
+|NOT NULL
+
+|=== 
+
+- Flights
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|FLIGHT_ID
+|int
+|NOT NULL
+
+|FROM_AIRPORT_ID
+|int
+|NOT NULL
+
+|TO_AIRPORT_ID
+|int
+|NOT NULL
+
+|ESTIMATED_ARRIVAL_DATE
+|date
+|null
+
+|ESTIMATED_DEPARTURE_DATE
+|date
+|null
+
+|AIRLINER_ID
+|int
+|NOT NULL
+
+|TotalSeats
+|int
+|NOT NULL
+|=== 
+
+
+
+- AIRLINER
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|AIRLINER_ID
+|int
+|NOT NULL
+
+|MODEL
+|string
+|NOT NULL
+|===
+
+- Airports
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|AIRPORT_ID
+|int
+|NOT NULL
+
+|NAME
+|string
+|NOT NULL
+
+|CITY_ID
+|int
+|NOT NULL
+
+|=== 
+
+- Appointments
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|PASSENGER_ID
+|int
+|NOT NULL
+
+|FLIGHT_ID
+|int
+|NOT NULL
+
+|=== 
+
+- Billing
+
+- Cities
+
+[%autowidth]
+[cols="1,1,1"]
+|===
+|Column_name
+|Datatype
+|Nullable
+
+|CITY_ID
+|int
+|NOT NULL
+
+|CITY_NAME
+|string
+|NOT NULL
+
+|=== 
+
+=== Relations
+
+=== Dependencies
+
+Npgsql.EntityFrameworkCore.PostgreSQL --version 7.0.1
+EntityFrameworkCore 7.0.2
