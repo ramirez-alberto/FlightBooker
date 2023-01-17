@@ -11,7 +11,7 @@ public static class ServiceExtensions
         var connectionString = configuration.GetConnectionString("postgresconnection");
 
         services.AddDbContext<RepositoryContext>(options =>
-            options.UseNpgsql(connectionString)
+            options.UseNpgsql(connectionString, b => b.MigrationsAssembly("FlightBooker"))
             );
 
     }

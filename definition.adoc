@@ -157,3 +157,8 @@
 
 Npgsql.EntityFrameworkCore.PostgreSQL --version 7.0.1
 EntityFrameworkCore 7.0.2
+Microsoft.EntityFrameworkCore.Design
+
+=== Tools
+
+dotnet tool install --global dotnet-ef
