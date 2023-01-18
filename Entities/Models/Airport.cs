@@ -17,4 +17,6 @@ public class Airport
     [Required]
     [StringLength(4)]
     public string AirportCode {get;set;}
+
+    public ICollection<Flight>? Flights {get;set;}
 }
