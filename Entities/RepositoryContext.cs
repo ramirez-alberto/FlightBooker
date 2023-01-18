@@ -15,9 +15,9 @@ public class RepositoryContext : DbContext
         modelBuilder.ApplyConfiguration(new AirportConfiguration());
     }
 
-    public DbSet<Airliner>? Airliners {get;set;} 
+    //public DbSet<Airliner>? Airliners {get;set;} 
     public DbSet<Airport>? Airports {get;set;}
-    public DbSet<City>? Cities {get;set;}
+    //public DbSet<City>? Cities {get;set;}
     public DbSet<Flight>? Flights {get;set;}
 
 }
