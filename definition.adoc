@@ -9,6 +9,8 @@
 3. Enter passenger information for all passengers
 4. Enter billing information
 
+Code-first approach
+
 === Models
 
 - Passengers
@@ -105,9 +107,9 @@
 |string
 |NOT NULL
 
-|CITY_ID
-|int
-|NOT NULL
+|CITY_ID | int | NOT NULL
+
+|AIRPORT_CODE | string(1,3) | NOT NULL
 
 |=== 
 
